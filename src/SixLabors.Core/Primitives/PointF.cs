@@ -312,5 +312,15 @@ namespace SixLabors.Primitives
         /// A 32-bit signed integer that is the hash code for this instance.
         /// </returns>
         private int GetHashCode(PointF point) => HashHelpers.Combine(point.X.GetHashCode(), point.Y.GetHashCode());
+
+        public static implicit operator System.Drawing.PointF(PointF size)
+        {
+            return new System.Drawing.PointF(size.X, size.Y);
+        }
+
+        public static implicit operator PointF(System.Drawing.PointF size)
+        {
+            return new PointF(size.X, size.Y);
+        }
     }
 }
