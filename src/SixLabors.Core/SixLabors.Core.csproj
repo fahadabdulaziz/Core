@@ -32,6 +32,8 @@
 
   <PropertyGroup>
     <CodeAnalysisRuleSet>..\SixLabors.ruleset</CodeAnalysisRuleSet>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>BotasCore.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <ItemGroup>
