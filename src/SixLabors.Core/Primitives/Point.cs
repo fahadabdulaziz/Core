@@ -298,5 +298,15 @@ namespace SixLabors.Primitives
         private static short LowInt16(int n) => unchecked((short)(n & 0xffff));
 
         private int GetHashCode(Point point) => HashHelpers.Combine(point.X.GetHashCode(), point.Y.GetHashCode());
+
+        public static implicit operator System.Drawing.Point(Point size)
+        {
+            return new System.Drawing.Point(size.X, size.Y);
+        }
+
+        public static implicit operator Point(System.Drawing.Point size)
+        {
+            return new Point(size.X, size.Y);
+        }
     }
 }

@@ -295,5 +295,15 @@ namespace SixLabors.Primitives
         /// A 32-bit signed integer that is the hash code for this instance.
         /// </returns>
         private int GetHashCode(Size size) => HashHelpers.Combine(size.Width.GetHashCode(), size.Height.GetHashCode());
+
+        public static implicit operator System.Drawing.Size(Size size)
+        {
+            return new System.Drawing.Size(size.Width, size.Height);
+        }
+
+        public static implicit operator Size(System.Drawing.Size size)
+        {
+            return new Size(size.Width, size.Height);
+        }
     }
 }

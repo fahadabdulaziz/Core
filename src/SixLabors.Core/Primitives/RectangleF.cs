@@ -399,5 +399,15 @@ namespace SixLabors.Primitives
             hashCode = HashHelpers.Combine(hashCode, rectangle.Height.GetHashCode());
             return hashCode;
         }
+
+        public static implicit operator System.Drawing.RectangleF(RectangleF size)
+        {
+            return new System.Drawing.RectangleF(size.X, size.Y, size.Width, size.Height);
+        }
+
+        public static implicit operator RectangleF(System.Drawing.RectangleF size)
+        {
+            return new RectangleF(size.X, size.Y, size.Width, size.Height);
+        }
     }
 }

@@ -226,5 +226,15 @@ namespace SixLabors.Primitives
             new SizeF(size.Width * multiplier, size.Height * multiplier);
 
         private int GetHashCode(SizeF size) => HashHelpers.Combine(size.Width.GetHashCode(), size.Height.GetHashCode());
+
+        public static implicit operator System.Drawing.SizeF(SizeF size)
+        {
+            return new System.Drawing.SizeF(size.Width, size.Height);
+        }
+
+        public static implicit operator SizeF(System.Drawing.SizeF size)
+        {
+            return new SizeF(size.Width, size.Height);
+        }
     }
 }
