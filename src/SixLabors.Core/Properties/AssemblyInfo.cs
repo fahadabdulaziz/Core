@@ -29,7 +29,7 @@ using System.Runtime.CompilerServices;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("0.1.0")]
-[assembly: AssemblyFileVersion("0.1.0")]
+[assembly: AssemblyFileVersion("2018.3.12")]
 [assembly: AssemblyInformationalVersion("0.1.0-alpha02")]
 
 // Ensure the internals can be tested.
