@@ -258,35 +258,20 @@ namespace SixLabors.Primitives
         public void Offset(Point point) => this.Offset(point.X, point.Y);
 
         /// <inheritdoc/>
-        public override int GetHashCode() => this.GetHashCode(this);
+        public override int GetHashCode() => HashHelpers.Combine(this.X.GetHashCode(), this.Y.GetHashCode());
 
         /// <inheritdoc/>
-        public override string ToString()
-        {
-            return $"Point [ X={this.X}, Y={this.Y} ]";
-        }
+        public override string ToString() => $"Point [ X={this.X}, Y={this.Y} ]";
 
         /// <inheritdoc/>
-        public override bool Equals(object obj) => obj is Point && this.Equals((Point)obj);
+        public override bool Equals(object obj) => obj is Point other && this.Equals(other);
 
         /// <inheritdoc/>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public bool Equals(Point other) => this.X == other.X && this.Y == other.Y;
+        public bool Equals(Point other) => this.X.Equals(other.X) && this.Y.Equals(other.Y);
 
         private static short HighInt16(int n) => unchecked((short)((n >> 16) & 0xffff));
 
         private static short LowInt16(int n) => unchecked((short)(n & 0xffff));
-
-        private int GetHashCode(Point point) => HashHelpers.Combine(point.X.GetHashCode(), point.Y.GetHashCode());
-
-        public static implicit operator System.Drawing.Point(Point size)
-        {
-            return new System.Drawing.Point(size.X, size.Y);
-        }
-
-        public static implicit operator Point(System.Drawing.Point size)
-        {
-            return new Point(size.X, size.Y);
-        }
     }
 }
