@@ -23,8 +23,8 @@
 
   <PropertyGroup>
     <CodeAnalysisRuleSet>..\SixLabors.ruleset</CodeAnalysisRuleSet>
-    <AssemblyVersion>0.1.0.2</AssemblyVersion>
-    <FileVersion>2018.10.1.2</FileVersion>
+    <AssemblyVersion>0.1.0.3</AssemblyVersion>
+    <FileVersion>2018.10.1.3</FileVersion>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>BotasCore.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
@@ -32,6 +32,10 @@
   <PropertyGroup Condition=" $(TargetFramework.StartsWith('netcoreapp2')) ">
     <DefineConstants>$(DefineConstants);SUPPORTS_MATHF</DefineConstants>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Primitives\Point.cs~RF7d203201.TMP" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.0-beta004">

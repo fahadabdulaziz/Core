@@ -449,5 +449,15 @@ namespace SixLabors.Primitives
             this.Y.Equals(other.Y) &&
             this.Width.Equals(other.Width) &&
             this.Height.Equals(other.Height);
+
+        public static implicit operator System.Drawing.Rectangle(Rectangle size)
+        {
+            return new System.Drawing.Rectangle(size.X, size.Y, size.Width, size.Height);
+        }
+
+        public static implicit operator Rectangle(System.Drawing.Rectangle size)
+        {
+            return new Rectangle(size.X, size.Y, size.Width, size.Height);
+        }
     }
 }
