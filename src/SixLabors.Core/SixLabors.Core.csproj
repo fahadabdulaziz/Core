@@ -23,8 +23,10 @@
 
     <PropertyGroup>
         <CodeAnalysisRuleSet>..\SixLabors.ruleset</CodeAnalysisRuleSet>
-        <AssemblyVersion>0.1.0.6</AssemblyVersion>
-        <FileVersion>2018.10.21.6</FileVersion>
+        <AssemblyVersion>0.1.0.7</AssemblyVersion>
+        <FileVersion>2018.10.21.7</FileVersion>
+        <SignAssembly>true</SignAssembly>
+        <AssemblyOriginatorKeyFile>BotasCore.snk</AssemblyOriginatorKeyFile>
     </PropertyGroup>
         
     <ItemGroup>
