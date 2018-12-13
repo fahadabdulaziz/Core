@@ -20,7 +20,7 @@ namespace SixLabors.Primitives
         /// <summary>
         /// Represents a <see cref="Rectangle"/> that has X, Y, Width, and Height values set to zero.
         /// </summary>
-        public static readonly Rectangle Empty = default(Rectangle);
+        public static readonly Rectangle Empty = default;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Rectangle"/> struct.
@@ -135,7 +135,6 @@ namespace SixLabors.Primitives
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get => unchecked(this.Y + this.Height);
-
         }
 
         /// <summary>
@@ -426,11 +425,7 @@ namespace SixLabors.Primitives
         /// <inheritdoc/>
         public override int GetHashCode()
         {
-            return HashHelpers.Combine(
-               this.X.GetHashCode(),
-               this.Y.GetHashCode(),
-               this.Width.GetHashCode(),
-               this.Height.GetHashCode());
+            return HashCode.Combine(this.X, this.Y, this.Width, this.Height);
         }
 
         /// <inheritdoc/>
