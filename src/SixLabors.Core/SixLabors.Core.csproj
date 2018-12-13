@@ -5,7 +5,7 @@
         <VersionPrefix Condition="$(packageversion) != ''">$(packageversion)</VersionPrefix>
         <VersionPrefix Condition="$(packageversion) == ''">0.1.0-alpha2</VersionPrefix>
         <Authors>Six Labors</Authors>
-        <TargetFrameworks>netstandard1.3;netstandard2.0;netcoreapp2.0;netcoreapp2.1;</TargetFrameworks>
+        <TargetFramework>netstandard2.0</TargetFramework>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <AssemblyName>SixLabors.Core</AssemblyName>
@@ -24,6 +24,10 @@
 
     <PropertyGroup>
         <CodeAnalysisRuleSet>..\SixLabors.ruleset</CodeAnalysisRuleSet>
+        <AssemblyVersion>0.1.0.3</AssemblyVersion>
+        <FileVersion>2018.12.13.3</FileVersion>
+        <SignAssembly>true</SignAssembly>
+        <AssemblyOriginatorKeyFile>BotasCore.snk</AssemblyOriginatorKeyFile>
     </PropertyGroup>
 
     <!-- TODO: Include .NETSTANDARD2.1 when released-->
