@@ -24,8 +24,8 @@
 
     <PropertyGroup>
         <CodeAnalysisRuleSet>..\SixLabors.ruleset</CodeAnalysisRuleSet>
-        <AssemblyVersion>0.1.0.3</AssemblyVersion>
-        <FileVersion>2018.12.13.3</FileVersion>
+        <AssemblyVersion>2019.4.2.51</AssemblyVersion>
+        <FileVersion>2019.4.28.51</FileVersion>
         <SignAssembly>true</SignAssembly>
         <AssemblyOriginatorKeyFile>BotasCore.snk</AssemblyOriginatorKeyFile>
     </PropertyGroup>
@@ -37,6 +37,19 @@
 
     <PropertyGroup Condition=" $(TargetFramework.StartsWith('netcoreapp2.1')) ">
       <DefineConstants>$(DefineConstants);SUPPORTS_HASHCODE</DefineConstants>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+      <ShouldCreateLogs>True</ShouldCreateLogs>
+      <AdvancedSettingsExpanded>True</AdvancedSettingsExpanded>
+      <UpdateAssemblyVersion>True</UpdateAssemblyVersion>
+      <UpdateAssemblyFileVersion>True</UpdateAssemblyFileVersion>
+      <UpdateAssemblyInfoVersion>False</UpdateAssemblyInfoVersion>
+      <AssemblyVersionSettings>YearStamp.MonthStamp.Increment.Increment</AssemblyVersionSettings>
+      <UpdatePackageVersion>False</UpdatePackageVersion>
+      <AssemblyInfoVersionType>SettingsVersion</AssemblyInfoVersionType>
+      <InheritWinAppVersionFrom>None</InheritWinAppVersionFrom>
+      <AssemblyFileVersionSettings>YearStamp.MonthStamp.Increment.Increment</AssemblyFileVersionSettings>
     </PropertyGroup>
   
     <ItemGroup>

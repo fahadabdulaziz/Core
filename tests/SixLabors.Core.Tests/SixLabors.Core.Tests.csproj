@@ -19,6 +19,8 @@
 
   <PropertyGroup>
     <CodeAnalysisRuleSet>..\SixLabors.ruleset</CodeAnalysisRuleSet>
+    <AssemblyVersion>0.0.0.1</AssemblyVersion>
+    <FileVersion>2018.12.26.1</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
